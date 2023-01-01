@@ -21,6 +21,14 @@ pipeline{
             }
         }
 
-        // Add the Release stage here
+
+       tage("Release"){
+            steps{
+                sh '''
+		oc project ngiekw-greetings
+                oc start-build greeting-console --follow --wait
+		'''
+            }
+        }
     }
 }
