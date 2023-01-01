@@ -22,7 +22,7 @@ pipeline{
         }
 
 
-       tage("Release"){
+        stage("Release"){
             steps{
                 sh '''
 		oc project ngiekw-greetings
